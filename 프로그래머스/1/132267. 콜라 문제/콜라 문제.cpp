@@ -10,8 +10,5 @@ int solution(int a, int b, int n) {
         n+=b;
         answer+=b;
     }
-    
-    
-    
     return answer;
 }
