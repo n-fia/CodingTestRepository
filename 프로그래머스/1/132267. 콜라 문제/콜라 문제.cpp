@@ -3,17 +3,15 @@
 
 using namespace std;
 
-int solution(int a, int b, int n)
-{
+int solution(int a, int b, int n) {
     int answer = 0;
-    int t = 0;
-    while(n+t>=a)
-    {
-        answer+=(n+t)/a*b;
-        n+=t;
-        t=n%a;
-        n=n/a*b;
+    while(n>=a){
+        n-=a;
+        n+=b;
+        answer+=b;
     }
+    
+    
     
     return answer;
 }
