@@ -4,19 +4,19 @@
 using namespace std;
 
 string solution(vector<string> cards1, vector<string> cards2, vector<string> goal) {
-    string answer = "";
-    int i=0, j=0;
-    //goal if cards[i]나 cards[j]가 str과 같어쩌구
-    for(string str : goal){
-        if(cards1[i]==str){
-            ++i;
+    string answer = "Yes";
+    
+    for(int i=0; i<goal.size(); ++i){
+        if(cards1[0]==goal[i]){
+            cards1.erase(cards1.begin());
             continue;
         }
-        if(cards2[j]==str){
-            ++j;
+        else if(cards2[0]==goal[i]){
+            cards2.erase(cards2.begin());
             continue;
         }
-        return "No";
+        answer="No";
     }
-    return "Yes";
+    
+    return answer;
 }
