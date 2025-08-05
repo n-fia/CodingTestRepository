@@ -5,10 +5,10 @@ using namespace std;
 
 int solution(int n) {
     int answer = 0;
-    for(int x=2; x<n; x++){
-        if(n%x==1&&answer==0){
-            answer=x;
+    for(int i=2; i<=n; ++i){
+        if(n%i==1){
+            return i;
         }
     }
-    return answer;
+    return n;
 }
