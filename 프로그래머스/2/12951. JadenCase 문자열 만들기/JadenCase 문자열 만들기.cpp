@@ -1,23 +1,21 @@
 #include <string>
 #include <vector>
-#include<ctype.h>
-#include <algorithm>
-#include <bits/stdc++.h>
 
 using namespace std;
 
 string solution(string s) {
-    string answer;
-    answer+= toupper(s[0]);
+    string answer = "";
     
-    for(int i=1; i<s.size(); ++i){
-        if(s[i-1] == ' '){
-            answer+=toupper(s[i]);
+    s[0]=toupper(s[0]);
+    
+    for(int i=1; i<s.length(); ++i){
+        if(s[i-1]==' '){
+            s[i]=toupper(s[i]);
         }
         else{
-            answer+=tolower(s[i]);
+            s[i]=tolower(s[i]);
         }
     }
     
-    return answer;
+    return s;
 }
